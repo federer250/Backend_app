@@ -3,7 +3,7 @@ package com.portfolio.fdm.Security.Service;
 
 import com.portfolio.fdm.Security.Entity.Rol;
 import com.portfolio.fdm.Security.Enums.RolNombre;
-import com.portfolio.fdm.Security.Repository.iRolRepository;
+import com.portfolio.fdm.Security.Repository.IRolRepository;
 import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class RolService {
     @Autowired
-    iRolRepository irolRepository;
+    IRolRepository irolRepository;
     
     public Optional<Rol> getByRolNombre(RolNombre rolNombre ){
         return irolRepository.findByRolNombre(rolNombre);
